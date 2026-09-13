@@ -9,19 +9,16 @@ The repository and the discussion of the FAIR principles were developed collabor
 
 Description of the directory layout.
 
-- `README.md` This is the file you're viewing right now.
-- `environment.yml` Defines the required Python packages using conda. Try to pin to specific major versions of your
-  dependencies as their behavior may change in the future.
-  The environment is currently called `my_environment` and you'll likely want to rename it to something less generic.
-
+- `README.md` – description of the project and instructions for reproducing the analysis.
+- `environment.yml`– specification of the Conda environment and required Python packages.
+-  `LICENSE` – terms under which the material in this repository may be reused.
+-  `*.ipynb` – Jupyter notebook containing the statistical analysis, explanations, code, output and discussion of the FAIR principles 
 ## Requirements
 
-To run the Notebooks online, click on the _Launch Binder_ badge above. Alternatively, to run on your own computer,
-install Python using _e.g._ [Miniforge](https://github.com/conda-forge/miniforge) or [Anaconda](https://docs.conda.io)
-and make sure all required packages are loaded by issuing the following terminal commands
+The workflow requires:
 
-``` bash
-conda env create -f environment.yml
-source activate my_environment
-jupyter-lab
-```
+-Conda, for example through Miniforge or Anaconda;
+-JupyterLab;
+-the Python packages specified in `environment.yml`.
+
+Alternatively, the notebook can be run online using Google Colab.
