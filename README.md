@@ -24,6 +24,10 @@ Both datasets (`PORTw` and `damage`) are bundled with the `extRemes` package its
 
 ### Option B: Local Jupyter with an R kernel
 
+Before running the commands below, make sure you have:
+- R installed.
+- Jupyter installed.
+
 ``` bash
 install.packages("remotes")
 remotes::install_version("extRemes", version = "2.2-1")
