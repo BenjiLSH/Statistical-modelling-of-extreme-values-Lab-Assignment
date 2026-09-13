@@ -17,8 +17,8 @@ Description of the directory layout.
 
 The workflow requires:
 
--Conda, for example through Miniforge or Anaconda;
--JupyterLab;
--the Python packages specified in `environment.yml`.
+- Conda, for example through Miniforge or Anaconda;
+- JupyterLab;
+- the Python packages specified in `environment.yml`.
 
 Alternatively, the notebook can be run online using Google Colab.
