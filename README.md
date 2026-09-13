@@ -1,24 +1,53 @@
-# Electronic Notebook: Statistical modelling of extreme values Lab Assignment
+# Electronic Notebook: Statistical Modelling of Extreme Values, Lab Assignment
 
-This GitHub repository was created to practice reproducible workflows and the FAIR principles.
+This GitHub repository was created to practice reproducible workflows and the FAIR principles. The R workflow demonstrates extreme value analysis using the `extRemes` package. 
 
-The code was written by Kadri Kalamäe.
+## What this does
 
-The repository and the discussion of the FAIR principles were developed collaboratively by Kadri Kalamäe and Sek Huen Leung.
-## Layout
+It fits Generalized Extreme Value (GEV) models to winter maximum temperature data (Port Jervis, NY, 1927-1995), with and without a climate covariate (the Arctic Oscillation index) in the location and scale parameters. It compares nested models with likelihood-ratio tests and computes the covariate-dependent return levels. Next, a threshold is selected for peaks-over-threshold analysis of US hurricane damages (1926-1995) using threshold-stability and mean-residual-life diagnostics. Finally, a Generalized Pareto (GP) distribution to the exceedances is fitted. 
 
-Description of the directory layout.
+Both datasets (`PORTw` and `damage`) are bundled with the `extRemes` package itself, so no external data download is required.
 
-- `README.md` – description of the project and instructions for reproducing the analysis.
-- `environment.yml`– specification of the Conda environment and required Python packages.
--  `LICENSE` – terms under which the material in this repository may be reused.
--  `*.ipynb` – Jupyter notebook containing the statistical analysis, explanations, code, output and discussion of the FAIR principles 
 ## Requirements
 
-The workflow requires:
+- R runtime. 
+- `extRemes` (pinned to version 2.2-1).
+- `remotes` (used to install the pinned version of `extRemes`).
 
-- Conda, for example through Miniforge or Anaconda;
-- JupyterLab;
-- the Python packages specified in `environment.yml`.
+## How to run
 
-Alternatively, the notebook can be run online using Google Colab.
+### Option A: Google Colab (recommended, no local setup)
+
+1. Click the "Open in Colab". 
+2. Set `Runtime > Change runtime type > R`.
+3. `Runtime > Run all`.
+
+### Option B: Local Jupyter with an R kernel
+
+``` bash
+install.packages("remotes")
+remotes::install_version("extRemes", version = "2.2-1")
+install.packages("IRkernel")
+IRkernel::installspec()
+```
+
+Then open `BERN02_Ex3.ipynb` in Jupyter and run all cells.
+
+## Repository contents
+
+- `BERN02_Ex3.ipynb`: The analysis notebook (R code, figures, FAIR discussion).
+- `LICENSE`: Project license.
+- `README.md`: This is the file you're viewing right now.
+
+## FAIR data principles
+
+A full discussion of how this workflow relates to the FAIR (Findable, Accessible, Interoperable, Reusable) principles is included as the final section of the notebook itself. 
+
+## Authors
+
+Sek Huen Leung, Kadri Kalamäe
+- The code was written by Kadri Kalamäe.
+- The repository and the discussion of the FAIR principles were developed collaboratively by Kadri Kalamäe and Sek Huen Leung.
+
+
+
